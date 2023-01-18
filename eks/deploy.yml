@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ses-demo-deployment
+  labels:
+    app: ses-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ses-demo
+  template:
+    metadata:
+      labels:
+        app: ses-demo
+    spec:
+      containers:
+        - name: ses-demo
+          image: nginx:1.14.2
+          ports:
+            - containerPort: 80
