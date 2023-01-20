@@ -17,7 +17,7 @@ jobs:
       uses: aws-actions/configure-aws-credentials@v1 # More information on this action can be found below in the 'AWS Credentials' section
       with:
         role-to-assume: arn:aws:iam::044135815009:role/github-ci
-        aws-region: aws-region-1
+        aws-region: eu-west-1
     - name: Login to Amazon ECR
       id: login-ecr
       uses: aws-actions/amazon-ecr-login@v1
