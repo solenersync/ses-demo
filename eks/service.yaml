@@ -4,9 +4,9 @@ metadata:
   name: ses-demo-service
 spec:
   selector:
-    app.kubernetes.io/name: ses-demo
+    app: ses-demo
   ports:
     - protocol: TCP
       port: 80
       targetPort: 8080
-  type: LoadBalancer
+  type: ClusterIP
