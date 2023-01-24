@@ -5,7 +5,7 @@ metadata:
   labels:
     app: ses-demo
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: ses-demo
@@ -16,7 +16,6 @@ spec:
     spec:
       containers:
       - name: ses-demo
-        image: 044135815009.dkr.ecr.eu-west-1.amazonaws.com/solenersync:latest
-        imagePullPolicy: Always
+        image: 044135815009.dkr.ecr.eu-west-1.amazonaws.com/solenersync
         ports:
         - containerPort: 8080
