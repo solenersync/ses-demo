@@ -20,4 +20,10 @@ class SesDemoControllerIT {
 		assertThat(response.getBody()).isEqualTo("Hello from Solenersync");
 	}
 
+	@Test
+	public void returnUser() throws Exception {
+		ResponseEntity<String> response = template.postForEntity("/user", "brian", String.class);
+		assertThat(response.getBody()).contains("Hello from brian");
+	}
+
 }
