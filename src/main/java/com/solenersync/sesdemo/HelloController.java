@@ -17,6 +17,6 @@ public class HelloController {
     @PostMapping("/user")
     public String user(@RequestBody String user) {
         System.out.println("sending user back..");
-        return "Hello from a new " + user;
+        return "Hello there from a new " + user;
     }
 }
