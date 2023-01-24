@@ -30,7 +30,7 @@ class SesDemoControllerTests {
 	public void returnUser() throws Exception {
 		mvc.perform(MockMvcRequestBuilders.post("/user").content("brian").accept(MediaType.APPLICATION_JSON))
 			.andExpect(status().isOk())
-			.andExpect(content().string(equalTo("Hello there from a new brian app")));
+			.andExpect(content().string(equalTo("Hello there from a new brian app2")));
 	}
 
 	@Test
