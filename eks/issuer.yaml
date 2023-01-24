@@ -3,7 +3,6 @@ kind: ClusterIssuer
 metadata:
   name: letsencrypt
 spec:
-  dnsPolicy: ClusterFirst
   acme:
     email: 16728365@mail.wit.ie
     server: https://acme-v02.api.letsencrypt.org/directory
