@@ -26,4 +26,17 @@ class SesDemoControllerTests {
 			.andExpect(content().string(equalTo("Hello from Solenersync")));
 	}
 
+	@Test
+	public void returnUser() throws Exception {
+		mvc.perform(MockMvcRequestBuilders.post("/user").content("brian").accept(MediaType.APPLICATION_JSON))
+			.andExpect(status().isOk())
+			.andExpect(content().string(equalTo("Hello from brian")));
+	}
+
+	@Test
+	public void return400() throws Exception {
+		mvc.perform(MockMvcRequestBuilders.post("/user").accept(MediaType.APPLICATION_JSON))
+			.andExpect(status().is4xxClientError());
+	}
+
 }
