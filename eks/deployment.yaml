@@ -16,6 +16,7 @@ spec:
     spec:
       containers:
       - name: ses-demo
-        image: 044135815009.dkr.ecr.eu-west-1.amazonaws.com/solenersync
+        image: 044135815009.dkr.ecr.eu-west-1.amazonaws.com/solenersync:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
