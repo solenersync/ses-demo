@@ -23,7 +23,7 @@ class SesDemoControllerIT {
 	@Test
 	public void returnUser() throws Exception {
 		ResponseEntity<String> response = template.postForEntity("/user", "brian", String.class);
-		assertThat(response.getBody()).contains("Hello there from a new brian app flux please work refactor");
+		assertThat(response.getBody()).contains("Hello there from a new brian app flux please work refactor YES!!!");
 	}
 
 }
