@@ -21,7 +21,7 @@ spec:
         path: "/"
         backend:
           service:
-            name: ses-demo-service
+            name: ses-new-service-service
             port:
               number: 80
   tls:

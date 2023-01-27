@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: ses-demo-service
+  name: ses-new-service-service
 spec:
   selector:
-    app: ses-demo
+    app: ses-new-service
   ports:
     - protocol: TCP
       port: 80
