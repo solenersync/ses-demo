@@ -14,8 +14,8 @@ To create an ses spring boot app:
 1. visit https://start.spring.io/
 2. Choose maven project and v 3.0.1
 3. <b>Group</b>: com.solenersync
-4. <b>Artifact</b>: ses-<service-name>
-5. <b>Name</b>: ses-<service-name>
+4. <b>Artifact</b>: ses-{service-name}
+5. <b>Name</b>: ses-{service-name}
 6. Choose Java17
 7. Extract and save to repositories dir
 8. Open in intellij
@@ -24,10 +24,10 @@ To create an ses spring boot app:
 11. Add unit and IT tests
 12. Copy over dependencies & plugins from pom
 13. Copy over github workflows
-14. Update ECR REPOSITORY with unique image repository name: eg: solenersync-ses-<service-name>
+14. Update ECR REPOSITORY with unique image repository name: eg: solenersync-ses-{service-name}
 
 Git:
-1. Create new repository (new should be in format of ses-<service-name>)
+1. Create new repository (new should be in format of ses-{service-name})
 2. Ensure it is private
 3. Push local repo to git remote
 
