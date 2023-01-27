@@ -16,13 +16,13 @@ class SesDemoControllerIT {
 
 	@Test
 	public void getHello() throws Exception {
-		ResponseEntity<String> response = template.getForEntity("/", String.class);
+		ResponseEntity<String> response = template.getForEntity("/v1/ses-demo", String.class);
 		assertThat(response.getBody()).isEqualTo("Hello from Solenersync");
 	}
 
 	@Test
 	public void returnUser() throws Exception {
-		ResponseEntity<String> response = template.postForEntity("/user", "brian", String.class);
+		ResponseEntity<String> response = template.postForEntity("/v1/ses-demo/user", "brian", String.class);
 		assertThat(response.getBody()).contains("Hello there from a new brian app flux please work refactor YES!!!");
 	}
 
