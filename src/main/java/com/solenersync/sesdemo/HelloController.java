@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class HelloController {
 
-    @GetMapping("/")
+    @GetMapping("/test")
     public String index() {
         System.out.println("sending response");
         return "Hello from Solenersync";
