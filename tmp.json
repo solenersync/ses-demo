@@ -1,0 +1,65 @@
+{
+    "apiVersion": "v1",
+    "kind": "Namespace",
+    "metadata": {
+        "creationTimestamp": "2023-01-25T20:01:47Z",
+        "deletionTimestamp": "2023-01-25T20:13:36Z",
+        "labels": {
+            "app.kubernetes.io/instance": "flux-system",
+            "app.kubernetes.io/part-of": "flux",
+            "app.kubernetes.io/version": "v0.38.3",
+            "kubernetes.io/metadata.name": "flux-system",
+            "kustomize.toolkit.fluxcd.io/name": "flux-system",
+            "kustomize.toolkit.fluxcd.io/namespace": "flux-system",
+            "pod-security.kubernetes.io/warn": "restricted",
+            "pod-security.kubernetes.io/warn-version": "latest"
+        },
+        "name": "flux-system",
+        "resourceVersion": "1963803",
+        "uid": "184d7a76-aad4-4beb-9552-8dd6d4e7a1aa"
+    },
+    "spec": {
+        "finalizers": [
+        ]
+    },
+    "status": {
+        "conditions": [
+            {
+                "lastTransitionTime": "2023-01-25T20:13:42Z",
+                "message": "All resources successfully discovered",
+                "reason": "ResourcesDiscovered",
+                "status": "False",
+                "type": "NamespaceDeletionDiscoveryFailure"
+            },
+            {
+                "lastTransitionTime": "2023-01-25T20:13:42Z",
+                "message": "All legacy kube types successfully parsed",
+                "reason": "ParsedGroupVersions",
+                "status": "False",
+                "type": "NamespaceDeletionGroupVersionParsingFailure"
+            },
+            {
+                "lastTransitionTime": "2023-01-25T20:13:42Z",
+                "message": "All content successfully deleted, may be waiting on finalization",
+                "reason": "ContentDeleted",
+                "status": "False",
+                "type": "NamespaceDeletionContentFailure"
+            },
+            {
+                "lastTransitionTime": "2023-01-25T20:13:42Z",
+                "message": "Some resources are remaining: gitrepositories.source.toolkit.fluxcd.io has 1 resource instances, kustomizations.kustomize.toolkit.fluxcd.io has 1 resource instances",
+                "reason": "SomeResourcesRemain",
+                "status": "True",
+                "type": "NamespaceContentRemaining"
+            },
+            {
+                "lastTransitionTime": "2023-01-25T20:13:42Z",
+                "message": "Some content in the namespace has finalizers remaining: finalizers.fluxcd.io in 2 resource instances",
+                "reason": "SomeFinalizersRemain",
+                "status": "True",
+                "type": "NamespaceFinalizersRemaining"
+            }
+        ],
+        "phase": "Terminating"
+    }
+}

@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ses-new-service-deployment
+  name: ses-demo-deployment
   labels:
-    app: ses-new-service
+    app: ses-demo
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: ses-new-service
+      app: ses-demo
   template:
     metadata:
       labels:
-        app: ses-new-service
+        app: ses-demo
     spec:
       containers:
-      - name: ses-new-service
+      - name: ses-demo
         image: 044135815009.dkr.ecr.eu-west-1.amazonaws.com/solenersync:latest
         imagePullPolicy: Always
         ports:
