@@ -16,7 +16,7 @@ class SesDemoControllerIT {
 
 	@Test
 	public void getHello() throws Exception {
-		ResponseEntity<String> response = template.getForEntity("/v1/ses-demo", String.class);
+		ResponseEntity<String> response = template.getForEntity("/v1/ses-demo/test", String.class);
 		assertThat(response.getBody()).isEqualTo("Hello from Solenersync");
 	}
 

@@ -21,21 +21,21 @@ class SesDemoControllerTests {
 
 	@Test
 	public void getHello() throws Exception {
-		mvc.perform(MockMvcRequestBuilders.get("/v1/ses-demo").accept(MediaType.APPLICATION_JSON))
+		mvc.perform(MockMvcRequestBuilders.get("/v1/ses-demo/test").accept(MediaType.APPLICATION_JSON))
 			.andExpect(status().isOk())
 			.andExpect(content().string(equalTo("Hello from Solenersync")));
 	}
 
 	@Test
 	public void returnUser() throws Exception {
-		mvc.perform(MockMvcRequestBuilders.post("v1/ses-demo/user").content("brian").accept(MediaType.APPLICATION_JSON))
+		mvc.perform(MockMvcRequestBuilders.post("/v1/ses-demo/user").content("brian").accept(MediaType.APPLICATION_JSON))
 			.andExpect(status().isOk())
 			.andExpect(content().string(equalTo("Hello there from a new brian app flux please work refactor YES!!!")));
 	}
 
 	@Test
 	public void return400() throws Exception {
-		mvc.perform(MockMvcRequestBuilders.post("v1/ses-demo/user").accept(MediaType.APPLICATION_JSON))
+		mvc.perform(MockMvcRequestBuilders.post("/v1/ses-demo/user").accept(MediaType.APPLICATION_JSON))
 			.andExpect(status().is4xxClientError());
 	}
 
