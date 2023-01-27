@@ -21,12 +21,6 @@ jobs:
       id: release-tag
       run: echo "release-tag=1.0.$(date +%s)" >> $GITHUB_OUTPUT
 
-    - name: Install kubectl
-      uses: azure/setup-kubectl@v3
-      with:
-        version: 'v1.26.1'
-      id: install
-
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
@@ -46,15 +40,4 @@ jobs:
       run: |
         docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
         docker push -a $REGISTRY/$REPOSITORY
-
-#    - name: Update Kube Config
-#      run: aws eks update-kubeconfig --name ses-prod-cluster --region eu-west-1
-
-#    - name: Deploy image to EKS
-#      run: |
-#        kubectl apply -f eks/aws-auth.yaml
-#        kubectl apply -f eks/deployment.yaml
-#        kubectl apply -f eks/service.yaml
-#        kubectl apply -f eks/issuer.yaml
-#        kubectl apply -f eks/ingress.yaml
 

@@ -1,10 +1,10 @@
 # ses-demo
-test
-test2
-test3
-test4
-test5
-test6
-test7
-test8
-test9
+Author: Brian Kinsella
+
+This is a custom application template with: 
+- Spring boot
+- Github actions workflow
+- Continuous integration - testing
+- Docker build, 
+- Auth with AWS
+- Integration with Amazon ECR
