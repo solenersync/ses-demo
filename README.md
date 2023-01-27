@@ -29,10 +29,11 @@ To create an ses spring boot app:
 Git:
 1. Create new repository (new should be in format of {service-name})
 2. Ensure it is private
-3. Push local repo to git remote
+3. Follow instuctions create a new repository on the command line
 
 To create manifests:
 1. Open repo https://github.com/solenersync/infra
 2. Copy over existing service dir (eg: ses-demo) and rename {newservice}
 3. Update config in all manifests in new dir to new service name eg: {newservice} instead of {ses-demo}
+4. Add pathtype for new service in ingress manifest
 
