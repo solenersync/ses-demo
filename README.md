@@ -13,9 +13,9 @@ This is a custom application template with:
 To create an ses spring boot app:
 1. visit https://start.spring.io/
 2. Choose maven project and v 3.0.1
-3. <b>Group<b>: com.solenersync
-4. <b>Artifact<b>: ses-<service-name>
-5. <b>Name<b>: ses-<service-name>
+3. <b>Group</b>: com.solenersync
+4. <b>Artifact</b>: ses-<service-name>
+5. <b>Name</b>: ses-<service-name>
 6. Choose Java17
 7. Extract and save to repositories dir
 8. Open in intellij
