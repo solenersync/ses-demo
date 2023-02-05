@@ -9,7 +9,7 @@ public class HelloController {
     @GetMapping("/test")
     public String index() {
         System.out.println("sending response");
-        return "Hello from Solenersync";
+        return "Hello from Solenersync..";
     }
 
     @PostMapping("/user")
