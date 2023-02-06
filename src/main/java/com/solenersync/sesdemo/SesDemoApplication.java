@@ -6,7 +6,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 
-import java.util.Arrays;
 
 @SpringBootApplication
 public class SesDemoApplication {
@@ -18,7 +17,7 @@ public class SesDemoApplication {
 	@Bean
 	public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
 		return args -> {
-			System.out.println("up and running...");
+			System.out.println("ses-demo up and running...");
 		};
 	}
 
