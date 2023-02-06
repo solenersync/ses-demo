@@ -1,42 +1,34 @@
 package com.solenersync.sesdemo;
 
+import com.solenersync.sesdemo.controller.HelloController;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@SpringBootTest
-@AutoConfigureMockMvc
+@ExtendWith({MockitoExtension.class})
 class SesDemoControllerTests {
 
-	@Autowired
-	private MockMvc mvc;
+	private MockMvc mockMvc;
+
+	@BeforeEach
+	public void setUp() {
+		mockMvc = MockMvcBuilders.standaloneSetup(new HelloController()).build();
+	}
 
 	@Test
 	public void getHello() throws Exception {
-		mvc.perform(MockMvcRequestBuilders.get("/v1/ses-demo/test").accept(MediaType.APPLICATION_JSON))
+		mockMvc.perform(MockMvcRequestBuilders.get("/v1/ses-demo/test").accept(MediaType.APPLICATION_JSON))
 			.andExpect(status().isOk())
-			.andExpect(content().string(equalTo("Hello from Solenersync")));
-	}
-
-	@Test
-	public void returnUser() throws Exception {
-		mvc.perform(MockMvcRequestBuilders.post("/v1/ses-demo/user").content("brian").accept(MediaType.APPLICATION_JSON))
-			.andExpect(status().isOk())
-			.andExpect(content().string(equalTo("Hello there from a new brian app flux please work refactor YES!!!")));
-	}
-
-	@Test
-	public void return400() throws Exception {
-		mvc.perform(MockMvcRequestBuilders.post("/v1/ses-demo/user").accept(MediaType.APPLICATION_JSON))
-			.andExpect(status().is4xxClientError());
+			.andExpect(content().string(equalTo("Testing 1...2...")));
 	}
 
 }

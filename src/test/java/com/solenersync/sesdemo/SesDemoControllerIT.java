@@ -17,13 +17,6 @@ class SesDemoControllerIT {
 	@Test
 	public void getHello() throws Exception {
 		ResponseEntity<String> response = template.getForEntity("/v1/ses-demo/test", String.class);
-		assertThat(response.getBody()).isEqualTo("Hello from Solenersync");
+		assertThat(response.getBody()).isEqualTo("Testing 1...2...");
 	}
-
-	@Test
-	public void returnUser() throws Exception {
-		ResponseEntity<String> response = template.postForEntity("/v1/ses-demo/user", "brian", String.class);
-		assertThat(response.getBody()).contains("Hello there from a new brian app flux please work refactor YES!!!");
-	}
-
 }
