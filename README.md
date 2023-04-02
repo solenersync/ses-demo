@@ -22,3 +22,5 @@ To create manifests:
 3. Update config in all manifests in new dir to new service name eg: {newservice} instead of {ses-demo}
 4. Add pathtype for new service in ingress manifest
 
+to test
+
